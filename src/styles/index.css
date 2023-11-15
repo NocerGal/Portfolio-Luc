@@ -11,6 +11,9 @@
 }
 
 @layer components {
+  h2 {
+    @apply text-center text-3xl font-semibold text-blue-12 dark:text-bluedark-12;
+  }
   .icon {
     @apply h-7 w-7 cursor-pointer text-blue-12 dark:text-bluedark-12;
   }
@@ -64,5 +67,9 @@
   }
   .label--input {
     @apply flex flex-col gap-3;
+  }
+
+  .description {
+    @apply text-xl text-blue-12 dark:text-bluedark-12 leading-relaxed mb-4 text-justify indent-10;
   }
 }

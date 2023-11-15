@@ -8,12 +8,12 @@ import {
 
 export default function Presentation() {
   return (
-    <section className="h-[88vh] bg-blue-2 dark:bg-bluedark-2">
-      <div className="h-full flex justify-evenly  max-w-5xl mx-auto px-8">
+    <section className="h-[88vh] ">
+      <div className="h-full flex justify-evenly  max-w-7xl mx-auto px-8">
         <div className="flex flex-col justify-between items-center md:flex-row gap-16 lg:gap-4 my-auto w-full">
           <div className="flex flex-col justify-around">
             <div className="leading-8">
-              <p className="relative name--light dark:name--dark text-6xl font-extrabold tracking-wider">
+              <p className="relative name--light dark:name--dark text-7xl font-extrabold tracking-wider">
                 SCHENEHRR Luc.
               </p>
               <p className="relative name text-4xl font-medium text-blue-11 dark:text-bluedark-12 leading-loose">

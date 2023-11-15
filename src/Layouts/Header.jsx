@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 h-[12vh] bg-blue-1 dark:bg-bluedark-1 border-b-2 border-blue-7 dark:border-bluedark-7 z-50">
-      <div className="flex max-w-5xl h-full mx-auto justify-between items-center px-8 border-b-blue-8 dark:border-b-bluedark-8">
+      <div className="flex max-w-7xl h-full mx-auto justify-between items-center px-8 border-b-blue-8 dark:border-b-bluedark-8">
         {theme ? (
           <img
             className="h-16 w-16"
