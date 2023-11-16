@@ -5,32 +5,59 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from '@radix-ui/react-icons';
+import { ReactLogo, ReduxLogo, TypeScriptLogo } from '../assets/react';
+import { useThemeContext } from '../Context/ThemeContext';
 
 export default function Presentation() {
+  const { theme } = useThemeContext();
+
   return (
-    <section className="h-[88vh] ">
+    <section className="h-[88vh]">
       <div className="h-full flex justify-evenly  max-w-7xl mx-auto px-8">
         <div className="flex flex-col justify-between items-center md:flex-row gap-16 lg:gap-4 my-auto w-full">
           <div className="flex flex-col justify-around">
-            <div className="leading-8">
-              <p className="relative name--light dark:name--dark text-7xl font-extrabold tracking-wider">
-                SCHENEHRR Luc.
-              </p>
+            <div className="leading-tight sm:leading-8 text-center md:text-start">
+              <h1 className="relative name--light dark:name--dark text-[11vw] sm:text-7xl font-extrabold tracking-wider">
+                SCHENHERR Luc.
+              </h1>
               <p className="relative name text-4xl font-medium text-blue-11 dark:text-bluedark-12 leading-loose">
                 Développeur Web React
               </p>
             </div>
-            <div>
-              <Flex direction="column" gap="4">
-                <div>
-                  <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
-                    Passioné par son métier, les nouvelles technologies
-                  </p>
-                  <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
-                    et vos projets.
-                  </p>
-                </div>
-                <Flex gap="4" wrap="wrap">
+
+            <Flex direction="column" gap="6">
+              <div className="text-center md:text-start">
+                <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
+                  Passionné par son métier, les nouvelles technologies
+                </p>
+                <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
+                  et vos projets.
+                </p>
+              </div>
+              <Flex
+                className="items-center md:items-start"
+                direction="column"
+                gap="5"
+              >
+                <Flex className="z-20" gap="6">
+                  <ReactLogo
+                    className={'h-20 fill-blue-12 dark:fill-[#C2E6FF]'}
+                  />
+                  <ReduxLogo
+                    color={theme == true ? '#C2E6FF' : '#113264'}
+                    classSize="h-20 w-20"
+                  />
+                  <TypeScriptLogo
+                    classNameBg={theme == true ? '#C2E6FF' : '#113264'}
+                    classNameText={theme == true ? '#0D1520' : '#FBFDFF'}
+                    classSize="h-20 w-20"
+                  />
+                </Flex>
+                <Flex
+                  gap="4"
+                  wrap="wrap"
+                  className="justify-center md:justify-start"
+                >
                   <a
                     href="https://github.com/NocerGal"
                     target="_blank"
@@ -110,7 +137,7 @@ export default function Presentation() {
                   </a>
                 </Flex>
               </Flex>
-            </div>
+            </Flex>
           </div>
           <div className="h-fit">
             <img

@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 export default function Description() {
   return (
-    <section className="mt-10">
+    <section id="description" className="pt-56">
       <div className="flex gap-6 flex-col relative px-8 max-w-5xl mx-auto">
         <h2>Qui suis-je?</h2>
-        <div className="w-4/5  mx-auto rounded-lg px-5 py-3 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-40 dark:bg-opacity-40 bg-blue-9 dark:bg-bluedark-9  shadow-md shadow-blue-7 dark:shadow-blue-7">
-          <p className="description">
+        <div className="w-4/5  mx-auto rounded-lg px-10 py-6 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-40 dark:bg-opacity-40 bg-blue-9 dark:bg-bluedark-9  sdw dark:sdw-dark">
+          <p className="description tracking-wide">
             Diplômé d'un Master en Production et Logistique, j'ai débuté dans la
             planification de production dans le secteur pharmaceutique,
             acquérant une expertise en gestion de projet. Ma passion pour la

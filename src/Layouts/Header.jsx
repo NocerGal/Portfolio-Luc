@@ -5,6 +5,11 @@ import DARK_LOGO from '../assets/logo_dark.jpg';
 import LIGHT_LOGO from '../assets/logo_light.jpg';
 import { useState } from 'react';
 import NavHeaderMobil from './NavHeaderMobil';
+import {
+  redirectSectionContact,
+  redirectSectionDescription,
+  redirectSectionRealisations,
+} from '../Functions/Redirections';
 
 export default function Header() {
   const { theme, toggleTheme } = useThemeContext();
@@ -50,14 +55,26 @@ export default function Header() {
           />
           <nav className="hidden md:flex gap-8 items-center">
             <ul className="flex gap-8 items-center">
-              <Link to="/" className="anim--link">
-                <li>Presentation</li>
+              <Link
+                to="/"
+                className="anim--link"
+                onClick={() => redirectSectionDescription()}
+              >
+                <li>Qui suis-je?</li>
               </Link>
-              <Link to="/" className="anim--link">
-                <li>Presentation</li>
+              <Link
+                to="/"
+                className="anim--link"
+                onClick={() => redirectSectionRealisations()}
+              >
+                <li>Réalisations</li>
               </Link>
-              <Link to="/" className="anim--link">
-                <li>Presentation</li>
+              <Link
+                to="/"
+                className="anim--link"
+                onClick={() => redirectSectionContact()}
+              >
+                <li>Contact</li>
               </Link>
             </ul>
           </nav>

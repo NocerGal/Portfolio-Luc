@@ -72,4 +72,11 @@
   .description {
     @apply text-xl text-blue-12 dark:text-bluedark-12 leading-relaxed mb-4 text-justify indent-10;
   }
+
+  .sdw {
+    @apply shadow-[0_6px_35px_-10px_rgba(17,50,100,1)];
+  }
+  .sdw-dark {
+    @apply shadow-[0_6px_35px_-18px_rgba(142,200,246,0.8)];
+  }
 }

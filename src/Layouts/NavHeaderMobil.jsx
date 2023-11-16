@@ -2,6 +2,11 @@ import { Cross1Icon } from '@radix-ui/react-icons';
 import { useLockBodyScroll } from '@uidotdev/usehooks';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {
+  redirectSectionContact,
+  redirectSectionDescription,
+  redirectSectionRealisations,
+} from '../Functions/Redirections';
 
 export default function NavHeaderMobil({ setNavBar }) {
   useLockBodyScroll();
@@ -13,14 +18,35 @@ export default function NavHeaderMobil({ setNavBar }) {
           <Cross1Icon className="absolute top-7 right-7 icon" />
         </button>
         <ul className="flex flex-col gap-4">
-          <Link to="/" className="anim--link">
-            <li>Presentation</li>
+          <Link
+            to="/"
+            className="anim--link"
+            onClick={() => {
+              redirectSectionDescription();
+              setNavBar((prev) => !prev);
+            }}
+          >
+            <li>Qui suis-je?</li>
           </Link>
-          <Link to="/" className="anim--link">
-            <li>Presentation</li>
+          <Link
+            to="/"
+            className="anim--link"
+            onClick={() => {
+              redirectSectionRealisations();
+              setNavBar((prev) => !prev);
+            }}
+          >
+            <li>Réalisations</li>
           </Link>
-          <Link to="/" className="anim--link">
-            <li>Presentation</li>
+          <Link
+            to="/"
+            className="anim--link"
+            onClick={() => {
+              redirectSectionContact();
+              setNavBar((prev) => !prev);
+            }}
+          >
+            <li>Réalisations</li>
           </Link>
         </ul>
       </nav>

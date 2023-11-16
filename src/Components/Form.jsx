@@ -4,7 +4,7 @@ import { Badge, Flex } from '@radix-ui/themes';
 
 export default function Contact() {
   return (
-    <section className="relative px-8 max-w-7xl mx-auto mt-16">
+    <section id="contact" className="relative px-8 max-w-7xl mx-auto p-56">
       <Flex
         direction="column"
         justify="between"

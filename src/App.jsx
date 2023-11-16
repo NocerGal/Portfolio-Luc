@@ -19,10 +19,12 @@ function App() {
           <div className="particle particle-1 "></div>
         </div>
         <Header />
-        <Presentation />
-        <Description />
-        <Realisations />
-        <Contact />
+        <main>
+          <Presentation />
+          <Description />
+          <Realisations />
+          <Contact />
+        </main>
       </Theme>
     </ThemeProvider>
   );
