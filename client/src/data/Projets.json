@@ -1,0 +1,37 @@
+[
+  {
+    "titre": "Draven the Real Legend",
+    "texte": "Site web utilisant l'API RIOT GAME permettant d'afficher l'historique des parties d'un joueur avec les différentes statistiques associées à la partie du joueur. La recherche s'effectue en fonction du pseudo du joueur et de sa région pour afficher lles 20 dernières parties.",
+    "image": "src/assets/Kasa.webp",
+    "tags": ["React", "TypeScript", "Tailwindcss"],
+    "git": "https://github.com/NocerGal"
+  },
+  {
+    "titre": "Argent Bank",
+    "texte": "L'objectif de ce projet a été de gérer la connexion d'un utilisateur à son espace bancaire en fonction d'un indentifiant et d'un ot de passe. L'utilisateur peut ensuite consulter ses transactions ainsi que modifier son identifiant",
+    "image": "src/assets/Kasa.webp",
+    "tags": ["React", "Redux", "HTML"],
+    "git": "https://github.com/NocerGal"
+  },
+  {
+    "titre": "724events",
+    "texte": "Ce projet avait pour but de reprendre le travail d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
+    "image": "src/assets/Kasa.webp",
+    "tags": ["React", "HTML", "Javascript"],
+    "git": "https://github.com/NocerGal"
+  },
+  {
+    "titre": "Nina Carducci",
+    "texte": "Après avoir contacté Nina Carducci pour lui proposer des services d'amélioration du SEO, plusieurs techniques ont été déployées pour maximiser le référencement naturel de son site vitrine.",
+    "image": "src/assets/Kasa.webp",
+    "tags": ["SEO"],
+    "git": "https://github.com/NocerGal"
+  },
+  {
+    "titre": "Sophie Bluel",
+    "texte": "Site vitrine de la photographe Sophie Bluel. L'artiste peut se connecter à se espace client pour ajouter ou supprimer des photographies. Un filtre permettra également à l'utilisateur d'afficher les photos qu'il souhaite utiliser.",
+    "image": "src/assets/Kasa.webp",
+    "tags": ["HTML", "JavaScript"],
+    "git": "https://github.com/NocerGal"
+  }
+]
