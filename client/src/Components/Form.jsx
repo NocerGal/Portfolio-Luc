@@ -5,6 +5,10 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 export default function Contact({ copyMail }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -35,21 +39,35 @@ export default function Contact({ copyMail }) {
             setButtonIsDisable((prev) => !prev);
           }, 5000);
         })
-        .catch(() => alert('Oooops daisy...'));
+        .catch(() => {
+          alert("Something went wrong, email hasn't been send");
+          setTextButton('Message non envoyé');
+          setTimeout(() => {
+            setTextButton('Envoyer');
+            setButtonIsDisable((prev) => !prev);
+          }, 3500);
+        });
       return;
     }
     return alert('Fill in all the fields to continue');
   }
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <section id="contact" className="relative px-8 max-w-7xl mx-auto p-56">
+    <section
+      id="contact"
+      className="relative px-8 max-w-7xl mx-auto p-56 pb-32"
+    >
       <Flex
         direction="column"
         justify="between"
         gap="6"
         className="flex justify-between items-center md:items-stretch md:flex-row md:w-3/4"
       >
-        <div className="flex flex-col gap-4 w-4/6 min-w-[231px]">
+        <div className="flex flex-col gap-8 w-4/6 min-w-[231px]">
           <h2 className="text-center text-3xl font-semibold text-blue-12 dark:text-bluedark-12">
             Contact
           </h2>
@@ -58,6 +76,7 @@ export default function Contact({ copyMail }) {
             className="flex flex-col gap-3"
             action="/send_email"
             method="post"
+            data-aos="fade-left"
           >
             <Form.Field className="label--input">
               <div className="flex flex-col">
@@ -193,7 +212,7 @@ export default function Contact({ copyMail }) {
         <div className="hidden md:flex items-center">
           <div className=" border-l-2 border-solid border-blue-7 dark:border-bluedark-7  h-2/3"></div>
         </div>
-        <div className=" md:w-1/6 flex items-center">
+        <div className=" md:w-1/6 flex items-center" data-aos="fade-right">
           <Flex direction="column" gap="5" className="w-fit">
             <a
               href="https://github.com/NocerGal"

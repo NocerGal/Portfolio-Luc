@@ -15,7 +15,7 @@
   },
   {
     "titre": "724events",
-    "texte": "Ce projet avait pour but de reprendre le travail d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
+    "texte": "Ce projet a but de reprendre le travail d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
     "image": "src/assets/Kasa.webp",
     "tags": ["React", "HTML", "Javascript"],
     "git": "https://github.com/NocerGal"
@@ -29,7 +29,7 @@
   },
   {
     "titre": "Sophie Bluel",
-    "texte": "Site vitrine de la photographe Sophie Bluel. L'artiste peut se connecter à se espace client pour ajouter ou supprimer des photographies. Un filtre permettra également à l'utilisateur d'afficher les photos qu'il souhaite utiliser.",
+    "texte": "Site vitrine de la photographe Sophie Bluel. L'artiste peut se connecter à son espace client pour ajouter ou supprimer des photographies. Un filtre permettra également à l'utilisateur d'afficher par thème les photos qu'il souhaite afficher.",
     "image": "src/assets/Kasa.webp",
     "tags": ["HTML", "JavaScript"],
     "git": "https://github.com/NocerGal"

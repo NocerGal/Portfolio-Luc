@@ -6,6 +6,7 @@ import '@radix-ui/themes/styles.css';
 import Contact from './Components/Form';
 import Description from './Components/Description';
 import Realisations from './Components/Realisations';
+import Footer from './Layouts/Footer';
 
 function App() {
   const copyEmailToClipBoard = async (email) => {
@@ -33,6 +34,7 @@ function App() {
           <Realisations />
           <Contact copyMail={copyEmailToClipBoard} />
         </main>
+        <Footer />
       </Theme>
     </ThemeProvider>
   );

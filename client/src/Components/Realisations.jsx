@@ -12,8 +12,8 @@ export default function Realisations() {
   }, []);
 
   return (
-    <section id="realisations" className="flex gap-10 flex-col pt-64">
-      <div className="flex gap-6 flex-col relative px-8 max-w-7xl mx-auto">
+    <section id="realisations" className="flex gap-10 flex-col pt-64  ">
+      <div className="flex gap-8 flex-col relative px-8 max-w-7xl mx-auto">
         <h2>Réalisations</h2>
 
         <div className=" relative px-8 max-w-7xl mx-auto">
@@ -57,12 +57,12 @@ function CardRealisation({ text, title, img, tags, git, animation }) {
       </div>
       <Flex direction="column" gap="4" justify="between" className="h-full">
         <Flex direction="column" gap="2">
-          <h4
+          <h3
             className="text-2xl font-semibold"
             onClick={() => window.open(git, '_blank')}
           >
             {title}
-          </h4>
+          </h3>
           <p className="text-justify leading-8 text-lg">{text}</p>
         </Flex>
         <div className="flex flex-wrap gap-5 ">

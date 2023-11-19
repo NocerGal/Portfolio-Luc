@@ -33,26 +33,29 @@ export default function Header() {
             title="dark logo"
           />
         )}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 text-blue-12 dark:text-bluedark-12">
           <button
             onClick={() => {
               toggleTheme();
             }}
-            className="relative"
+            className="hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 pb-2 hover:text-blue-1 dark:hover:text-bluedark-12 transition-all"
           >
-            <SunIcon
-              className={`icon rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 `}
-              xlinkTitle="switch to sun theme"
-            />
-            <MoonIcon
-              className={`absolute top-0 icon rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100 `}
-              xlinkTitle="switch to moon theme"
+            <div className="relative">
+              <MoonIcon
+                className={`icon rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 `}
+              />
+              <SunIcon
+                className={`absolute top-0 icon rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100 `}
+              />
+            </div>
+          </button>
+
+          <button className="flex md:hidden hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 pb-2 hover:text-blue-1 dark:hover:text-bluedark-12 transition-all">
+            <TextAlignJustifyIcon
+              onClick={() => setNavBar((prev) => !prev)}
+              className="icon "
             />
           </button>
-          <TextAlignJustifyIcon
-            onClick={() => setNavBar((prev) => !prev)}
-            className="icon flex md:hidden "
-          />
           <nav className="hidden md:flex gap-8 items-center">
             <ul className="flex gap-8 items-center">
               <Link
@@ -83,4 +86,22 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+//           <div className="hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 hover:text-blue-1 dark:hover:text-bluedark-12">
+{
+  /* <button
+onClick={() => {
+  toggleTheme();
+}}
+className="relative"
+>
+<MoonIcon
+  className={`absolute top-0 icon rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100 `}
+/>
+<SunIcon
+  className={`icon rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 `}
+/>
+</button>
+</div> */
 }

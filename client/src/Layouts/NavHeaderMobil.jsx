@@ -17,10 +17,10 @@ export default function NavHeaderMobil({ setNavBar }) {
         <button onClick={() => setNavBar((prev) => !prev)}>
           <Cross1Icon className="absolute top-7 right-7 icon" />
         </button>
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-8">
           <Link
             to="/"
-            className="anim--link"
+            className="anim--link font-semibold"
             onClick={() => {
               redirectSectionDescription();
               setNavBar((prev) => !prev);
@@ -30,7 +30,7 @@ export default function NavHeaderMobil({ setNavBar }) {
           </Link>
           <Link
             to="/"
-            className="anim--link"
+            className="anim--link  font-semibold"
             onClick={() => {
               redirectSectionRealisations();
               setNavBar((prev) => !prev);
@@ -40,7 +40,7 @@ export default function NavHeaderMobil({ setNavBar }) {
           </Link>
           <Link
             to="/"
-            className="anim--link"
+            className="anim--link font-semibold"
             onClick={() => {
               redirectSectionContact();
               setNavBar((prev) => !prev);

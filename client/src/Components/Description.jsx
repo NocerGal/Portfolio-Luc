@@ -9,9 +9,9 @@ export default function Description() {
   }, []);
 
   return (
-    <section id="description" className="pt-56">
+    <section id="description" className="pt-[35rem]  sm:pt-48">
       <div
-        className="flex gap-6 flex-col relative px-8 max-w-5xl mx-auto"
+        className="flex gap-8 flex-col relative px-8 max-w-5xl mx-auto"
         data-aos="fade-up"
       >
         <h2>Qui suis-je?</h2>

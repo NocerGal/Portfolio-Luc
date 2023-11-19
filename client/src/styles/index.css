@@ -19,7 +19,7 @@
     @apply font-semibold text-lg;
   }
   .icon {
-    @apply h-7 w-7 cursor-pointer text-blue-12 dark:text-bluedark-12;
+    @apply h-6 w-6 cursor-pointer;
   }
 
   li {
@@ -165,34 +165,20 @@
       stroke-dashoffset: -124;
     }
   }
-  /* @-webkit-keyframes color {
-    0% {
-      stroke: #70c542;
-    }
-    40% {
-      stroke: #70c542;
-    }
-    66% {
-      stroke: #70c542;
-    }
-    80%,
-    90% {
-      stroke: #70c542;
-    }
+
+  .border--footer {
+    position: relative;
   }
-  @keyframes color {
-    0% {
-      stroke: #70c542;
-    }
-    40% {
-      stroke: #70c542;
-    }
-    66% {
-      stroke: #70c542;
-    }
-    80%,
-    90% {
-      stroke: #70c542;
-    }
-  } */
+  .border--footer:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 0;
+
+    height: 2px;
+
+    width: 500px;
+
+    transform: translateX(-50%);
+  }
 }
