@@ -5,11 +5,13 @@ import { GitHubLogo } from '../assets/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { useThemeContext } from '../Context/ThemeContext';
 
 export default function Realisations() {
   useEffect(() => {
     AOS.init();
   }, []);
+  const { lang } = useThemeContext();
 
   return (
     <section id="realisations" className="flex gap-10 flex-col pt-64  ">
@@ -21,8 +23,8 @@ export default function Realisations() {
             {projets.map((projet, i) => (
               <CardRealisation
                 animation="fade-up"
-                key={i + projet.texte}
-                text={projet.texte}
+                key={i + projet.titre}
+                text={projet.lang[lang]}
                 title={projet.titre}
                 tags={projet.tags}
                 img={projet.image}

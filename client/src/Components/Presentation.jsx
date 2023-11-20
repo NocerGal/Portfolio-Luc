@@ -12,8 +12,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
+import { useTranslation } from 'react-i18next';
+
 export default function Presentation() {
   const { theme } = useThemeContext();
+  const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init();
@@ -25,20 +28,20 @@ export default function Presentation() {
           <div className="flex flex-col justify-around">
             <div className="flex flex-col gap-4 sm:black leading-tight sm:leading-8 text-center md:text-start">
               <h1 className="relative name--light dark:name--dark text-[11vw] sm:text-7xl font-extrabold tracking-wider">
-                SCHENHERR Luc.
+                {t('presentation-name')}
               </h1>
               <p className="relative name text-4xl font-medium text-blue-11 dark:text-bluedark-12 ">
-                Développeur Web React
+                {t('presentation-job')}
               </p>
             </div>
 
             <Flex className="mt-5" direction="column" gap="6">
               <div className="text-center md:text-start">
                 <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
-                  Passionné par son métier, les nouvelles technologies
+                  {t('presentation-first-sentence')}
                 </p>
                 <p className="relative name text-2xl font-medium text-blue-11 dark:text-bluedark-12 leading-relaxed">
-                  et vos projets.
+                  {t('presentation-second-sentence')}
                 </p>
               </div>
               <Flex

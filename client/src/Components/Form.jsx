@@ -8,14 +8,16 @@ import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact({ copyMail }) {
+  const { t } = useTranslation();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [copyMessage, setCopyMessage] = useState(false);
-  const [textButton, setTextButton] = useState('Envoyer');
+  const [textButton, setTextButton] = useState(t('form-button-send'));
   const [buttonIsDisable, setButtonIsDisable] = useState(false);
 
   function sendMail() {
@@ -33,17 +35,17 @@ export default function Contact({ copyMail }) {
           setLastName('');
           setEmail('');
           setMessage('');
-          setTextButton('Message envoyé');
+          setTextButton(t('form-button-sent'));
           setTimeout(() => {
-            setTextButton('Envoyer');
+            setTextButton(t('form-button-send'));
             setButtonIsDisable((prev) => !prev);
           }, 5000);
         })
         .catch(() => {
           alert("Something went wrong, email hasn't been send");
-          setTextButton('Message non envoyé');
+          setTextButton(t('form-button-failed'));
           setTimeout(() => {
-            setTextButton('Envoyer');
+            setTextButton(t('form-button-send'));
             setButtonIsDisable((prev) => !prev);
           }, 3500);
         });
@@ -69,9 +71,11 @@ export default function Contact({ copyMail }) {
       >
         <div className="flex flex-col gap-8 w-4/6 min-w-[231px]">
           <h2 className="text-center text-3xl font-semibold text-blue-12 dark:text-bluedark-12">
-            Contact
+            {t('form-contact')}
           </h2>
           <Form.Root
+            name="contact-form"
+            autoComplete="on"
             onSubmit={() => sendMail()}
             className="flex flex-col gap-3"
             action="/send_email"
@@ -80,90 +84,90 @@ export default function Contact({ copyMail }) {
           >
             <Form.Field className="label--input">
               <div className="flex flex-col">
-                <Form.Label htmlFor="firstname" className="FormLabel">
-                  Prénom
+                <Form.Label htmlFor="firstname">
+                  {t('form-firstname')}
                 </Form.Label>
                 <Form.Control asChild>
                   <input
                     onChange={(e) => setFirstName(e.target.value)}
                     value={firstName}
                     className="w-full input"
-                    type="email"
-                    name="firstname"
+                    type="text"
                     id="firstname"
+                    name="firstname"
+                    autoComplete="given-name"
                     required
                   />
                 </Form.Control>
                 <Form.Message match="valueMissing">
-                  Entrer votre prénom
+                  {t('form-enter-firstname')}
                 </Form.Message>
               </div>
             </Form.Field>
             <Form.Field className="label--input" name="lastname">
               <div className="flex flex-col">
-                <Form.Label htmlFor="lastname" className="FormLabel">
-                  Nom
-                </Form.Label>
+                <Form.Label htmlFor="lastname">{t('form-name')}</Form.Label>
 
                 <Form.Control asChild className="w-full">
                   <input
                     onChange={(e) => setLastName(e.target.value)}
                     value={lastName}
                     id="lastname"
+                    name="lastname"
+                    autoComplete="family-name"
                     className="input"
                     type="email"
                     required
                   />
                 </Form.Control>
                 <Form.Message className="lastName" match="valueMissing">
-                  Entrer votre nom
+                  {t('form-enter-name')}
                 </Form.Message>
               </div>
             </Form.Field>
             <Form.Field className="label--input" name="email">
               <div className="flex flex-col">
-                <Form.Label htmlFor="mail" className="mail">
-                  Email
-                </Form.Label>
+                <Form.Label htmlFor="mail">{t('form-mail')}</Form.Label>
 
                 <Form.Control className="w-full" asChild>
                   <input
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     id="mail"
+                    name="mail"
+                    autoComplete="email"
                     className="input"
                     type="email"
                     required
                   />
                 </Form.Control>
                 <Form.Message className="FormMessage" match="valueMissing">
-                  Enter your email
+                  {t('form-enter-mail')}
                 </Form.Message>
                 <Form.Message className="FormMessage" match="typeMismatch">
-                  Provide a valid email
+                  {t('form-provide-email')}
                 </Form.Message>
               </div>
             </Form.Field>
             <Form.Field className="label--input" name="message">
               <div>
-                <Form.Label htmlFor="message" className="FormMessage">
-                  Votre message
-                </Form.Label>
+                <Form.Label htmlFor="message">{t('form-message')}</Form.Label>
 
                 <Form.Control asChild>
                   <textarea
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                     id="message"
+                    name="message"
+                    autoComplete="off"
                     className="w-full resize-none input"
-                    name=""
                     cols="30"
                     rows="10"
                     required
                   ></textarea>
                 </Form.Control>
                 <Form.Message className="w-full" match="valueMissing">
-                  Indiquer votre question
+                  {t('form-provide-message')}
                 </Form.Message>
               </div>
             </Form.Field>

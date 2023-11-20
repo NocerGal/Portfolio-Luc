@@ -7,8 +7,10 @@ import {
   redirectSectionDescription,
   redirectSectionRealisations,
 } from '../Functions/Redirections';
+import { useTranslation } from 'react-i18next';
 
 export default function NavHeaderMobil({ setNavBar }) {
+  const { t } = useTranslation();
   useLockBodyScroll();
 
   return (
@@ -26,7 +28,7 @@ export default function NavHeaderMobil({ setNavBar }) {
               setNavBar((prev) => !prev);
             }}
           >
-            <li>Qui suis-je?</li>
+            <li>{t('header-first-li')}</li>
           </Link>
           <Link
             to="/"
@@ -36,7 +38,7 @@ export default function NavHeaderMobil({ setNavBar }) {
               setNavBar((prev) => !prev);
             }}
           >
-            <li>Réalisations</li>
+            <li>{t('header-second-li')}</li>
           </Link>
           <Link
             to="/"
@@ -46,7 +48,7 @@ export default function NavHeaderMobil({ setNavBar }) {
               setNavBar((prev) => !prev);
             }}
           >
-            <li>Réalisations</li>
+            <li>{t('header-third-li')}</li>
           </Link>
         </ul>
       </nav>

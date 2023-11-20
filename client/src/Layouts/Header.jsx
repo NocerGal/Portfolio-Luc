@@ -10,9 +10,11 @@ import {
   redirectSectionDescription,
   redirectSectionRealisations,
 } from '../Functions/Redirections';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-  const { theme, toggleTheme } = useThemeContext();
+  const { t } = useTranslation();
+  const { theme, toggleTheme, lang, toggleLang } = useThemeContext();
   const [navBar, setNavBar] = useState(false);
 
   return (
@@ -34,6 +36,14 @@ export default function Header() {
           />
         )}
         <div className="flex items-center gap-8 text-blue-12 dark:text-bluedark-12">
+          <select
+            value={lang}
+            onChange={(e) => toggleLang(e.target.value)}
+            className="bg-transparent text-4xl rounded-lg border-2 border-transparent hover:border-blue-7 dark:hover:border-bluedark-7"
+          >
+            <option value="fr">🇫🇷</option>
+            <option value="en">🇬🇧</option>
+          </select>
           <button
             onClick={() => {
               toggleTheme();
@@ -63,21 +73,21 @@ export default function Header() {
                 className="anim--link"
                 onClick={() => redirectSectionDescription()}
               >
-                <li>Qui suis-je?</li>
+                <li>{t('header-first-li')}</li>
               </Link>
               <Link
                 to="/"
                 className="anim--link"
                 onClick={() => redirectSectionRealisations()}
               >
-                <li>Réalisations</li>
+                <li>{t('header-second-li')}</li>
               </Link>
               <Link
                 to="/"
                 className="anim--link"
                 onClick={() => redirectSectionContact()}
               >
-                <li>Contact</li>
+                <li>{t('header-third-li')}</li>
               </Link>
             </ul>
           </nav>
@@ -86,22 +96,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
-
-//           <div className="hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 hover:text-blue-1 dark:hover:text-bluedark-12">
-{
-  /* <button
-onClick={() => {
-  toggleTheme();
-}}
-className="relative"
->
-<MoonIcon
-  className={`absolute top-0 icon rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100 `}
-/>
-<SunIcon
-  className={`icon rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 `}
-/>
-</button>
-</div> */
 }

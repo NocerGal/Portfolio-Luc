@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import { createContext, useContext, useEffect, useState } from 'react';
+import i18n from '../i18n';
 
 export const ThemeContext = createContext(null);
 
@@ -12,6 +14,7 @@ export function ThemeProvider({ children }) {
   ).matches;
 
   const [theme, setTheme] = useState(systemeTheme);
+  const [lang, setLang] = useState(navigator.language.substring(0, 2));
 
   const toggleTheme = () => {
     setTheme((prev) => !prev);
@@ -25,6 +28,10 @@ export function ThemeProvider({ children }) {
     }
   };
 
+  const toggleLang = (lang) => {
+    setLang(lang);
+  };
+
   useEffect(() => {
     if (theme == false) {
       document.documentElement.classList.remove('dark');
@@ -36,8 +43,12 @@ export function ThemeProvider({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang]);
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, lang, toggleLang }}>
       {children}
     </ThemeContext.Provider>
   );
