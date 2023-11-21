@@ -50,7 +50,7 @@ function CardRealisation({ text, title, img, tags, git, animation, website }) {
         <img
           className="w-full h-full object-cover object-top rounded-t-md"
           src={img}
-          alt="projet"
+          alt={`screenshot of ${title} project`}
           loading="lazy"
           title={title}
         />
@@ -62,14 +62,10 @@ function CardRealisation({ text, title, img, tags, git, animation, website }) {
       <Flex direction="column" gap="4" justify="between" className="h-full">
         <Flex direction="column" gap="2">
           <div className="flex gap-2 items-baseline">
-            <h3
-              className="text-2xl font-semibold"
-              // onClick={() => window.open(git, '_blank')}
-            >
-              {title}
-            </h3>
+            <h3 className="text-2xl font-semibold">{title}</h3>
             {website && (
               <a
+                aria-label={`redirect to ${title} website`}
                 className="hover:underline hover:underline-offset-4 text-sm "
                 href={website}
                 target="_blank"
@@ -79,7 +75,7 @@ function CardRealisation({ text, title, img, tags, git, animation, website }) {
               </a>
             )}
           </div>
-          <p className="text-justify leading-8 text-lg">{text}</p>
+          <p className="leading-8 text-lg">{text}</p>
         </Flex>
         <div className="flex flex-wrap gap-5 ">
           {tags.map((tag, i) => (

@@ -74,7 +74,7 @@
   }
 
   .description {
-    @apply text-xl text-blue-12 dark:text-bluedark-12 leading-relaxed mb-4 text-justify indent-10;
+    @apply text-xl text-blue-12 dark:text-bluedark-12 leading-relaxed mb-4 indent-10;
   }
 
   .sdw {

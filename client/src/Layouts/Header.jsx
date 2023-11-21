@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import { useThemeContext } from '../Context/ThemeContext';
 import { MoonIcon, SunIcon, TextAlignJustifyIcon } from '@radix-ui/react-icons';
-import DARK_LOGO from '../assets/logo_dark.jpg';
-import LIGHT_LOGO from '../assets/logo_light.jpg';
+import DARK_LOGO from '../assets/logoDark.webp';
+import LIGHT_LOGO from '../assets/logoLight.webp';
 import { useState } from 'react';
 import NavHeaderMobil from './NavHeaderMobil';
 import {
@@ -37,6 +36,7 @@ export default function Header() {
         )}
         <div className="flex items-center gap-8 text-blue-12 dark:text-bluedark-12">
           <select
+            aria-label="select language"
             value={lang}
             onChange={(e) => toggleLang(e.target.value)}
             className="bg-transparent text-4xl rounded-lg border-2 border-transparent hover:border-blue-7 dark:hover:border-bluedark-7"
@@ -45,6 +45,7 @@ export default function Header() {
             <option value="en">🇬🇧</option>
           </select>
           <button
+            aria-label="change theme"
             onClick={() => {
               toggleTheme();
             }}
@@ -60,7 +61,10 @@ export default function Header() {
             </div>
           </button>
 
-          <button className="flex md:hidden hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 pb-2 hover:text-blue-1 dark:hover:text-bluedark-12 transition-all">
+          <button
+            aria-label="open side header"
+            className="flex md:hidden hover:bg-blue-9 dark:hover:bg-bluedark-9 rounded-full pt-2 px-2 pb-2 hover:text-blue-1 dark:hover:text-bluedark-12 transition-all"
+          >
             <TextAlignJustifyIcon
               onClick={() => setNavBar((prev) => !prev)}
               className="icon "
@@ -68,27 +72,27 @@ export default function Header() {
           </button>
           <nav className="hidden md:flex gap-8 items-center">
             <ul className="flex gap-8 items-center">
-              <Link
-                to="/"
+              <a
+                aria-label="redirect to description section"
                 className="anim--link"
                 onClick={() => redirectSectionDescription()}
               >
                 <li>{t('header-first-li')}</li>
-              </Link>
-              <Link
-                to="/"
+              </a>
+              <a
+                aria-label="realisations section"
                 className="anim--link"
                 onClick={() => redirectSectionRealisations()}
               >
                 <li>{t('header-second-li')}</li>
-              </Link>
-              <Link
-                to="/"
+              </a>
+              <a
+                aria-label="redirect to contact form"
                 className="anim--link"
                 onClick={() => redirectSectionContact()}
               >
                 <li>{t('header-third-li')}</li>
-              </Link>
+              </a>
             </ul>
           </nav>
           {navBar && <NavHeaderMobil setNavBar={setNavBar} />}

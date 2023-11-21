@@ -173,6 +173,7 @@ export default function Contact({ copyMail }) {
             </Form.Field>
             <Form.Submit asChild>
               <button
+                aria-label="Submit contact form"
                 disabled={buttonIsDisable}
                 onClick={() => {
                   setButtonIsDisable((prev) =>

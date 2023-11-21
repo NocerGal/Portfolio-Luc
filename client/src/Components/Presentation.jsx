@@ -69,6 +69,7 @@ export default function Presentation() {
                   className="justify-center md:justify-start"
                 >
                   <a
+                    aria-label="redirect to Luc's GitHub"
                     href="https://github.com/NocerGal"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -86,10 +87,11 @@ export default function Presentation() {
                     </Badge>
                   </a>
                   <a
+                    aria-label="redirect to Luc's LinkedIn"
                     href="https://www.linkedin.com/in/luc-schenherr-810205140/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="link to Luc's Linkedin"
+                    title="link to Luc's LinkedIn"
                   >
                     <Badge
                       className="badge"
@@ -103,6 +105,7 @@ export default function Presentation() {
                     </Badge>
                   </a>
                   <a
+                    aria-label="redirect to Luc's Malt"
                     href="https://www.malt.fr/profile/lucschenherr1"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -137,6 +140,7 @@ export default function Presentation() {
                     </Badge>
                   </a>
                   <a
+                    aria-label="redirect to send an email to Luc"
                     href="mailto:luc.schenherr.dev@gmail.com"
                     title="link to send a mail to Luc"
                   >

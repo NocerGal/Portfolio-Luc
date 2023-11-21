@@ -78,6 +78,7 @@ export const GitHubLogo = ({ className, git }) => {
       xmlns="http://www.w3.org/2000/svg"
       height="1em"
       viewBox="0 0 448 512"
+      aria-label="redirect to Luc's projet"
       onClick={() => {
         window.open(git, '_blank');
       }}
