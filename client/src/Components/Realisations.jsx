@@ -6,17 +6,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { useThemeContext } from '../Context/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 export default function Realisations() {
   useEffect(() => {
     AOS.init();
   }, []);
   const { lang } = useThemeContext();
-
+  const { t } = useTranslation();
   return (
     <section id="realisations" className="flex gap-10 flex-col pt-64  ">
       <div className="flex gap-8 flex-col relative px-8 max-w-7xl mx-auto">
-        <h2>Réalisations</h2>
+        <h2>{t('realisations-title')}</h2>
 
         <div className=" relative px-8 max-w-7xl mx-auto">
           <div className="flex flex-wrap flex-col md:grid md:grid-cols-2 md:gap-12 justify-start gap-8">
@@ -29,6 +30,7 @@ export default function Realisations() {
                 tags={projet.tags}
                 img={projet.image}
                 git={projet.git}
+                website={projet.website}
               />
             ))}
           </div>
@@ -38,7 +40,7 @@ export default function Realisations() {
   );
 }
 
-function CardRealisation({ text, title, img, tags, git, animation }) {
+function CardRealisation({ text, title, img, tags, git, animation, website }) {
   return (
     <div
       data-aos={animation}
@@ -46,7 +48,7 @@ function CardRealisation({ text, title, img, tags, git, animation }) {
     >
       <div className="relative w-full h-48 rounded-t-md">
         <img
-          className="w-full h-full object-cover rounded-t-md"
+          className="w-full h-full object-cover object-top rounded-t-md"
           src={img}
           alt="projet"
           loading="lazy"
@@ -54,17 +56,29 @@ function CardRealisation({ text, title, img, tags, git, animation }) {
         />
         <GitHubLogo
           git={git}
-          className="absolute top-0 left-0 h-10 w-10 cursor-pointer"
+          className="absolute top-2 left-2 h-10 w-10 cursor-pointer bg-whitea-12"
         />
       </div>
       <Flex direction="column" gap="4" justify="between" className="h-full">
         <Flex direction="column" gap="2">
-          <h3
-            className="text-2xl font-semibold"
-            onClick={() => window.open(git, '_blank')}
-          >
-            {title}
-          </h3>
+          <div className="flex gap-2 items-baseline">
+            <h3
+              className="text-2xl font-semibold"
+              // onClick={() => window.open(git, '_blank')}
+            >
+              {title}
+            </h3>
+            {website && (
+              <a
+                className="hover:underline hover:underline-offset-4 text-sm "
+                href={website}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Website
+              </a>
+            )}
+          </div>
           <p className="text-justify leading-8 text-lg">{text}</p>
         </Flex>
         <div className="flex flex-wrap gap-5 ">
@@ -90,4 +104,5 @@ CardRealisation.propTypes = {
   tags: PropTypes.array,
   git: PropTypes.string,
   animation: PropTypes.string,
+  website: PropTypes.string,
 };

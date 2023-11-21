@@ -80,7 +80,7 @@ export default function Contact({ copyMail }) {
             className="flex flex-col gap-3"
             action="/send_email"
             method="post"
-            data-aos="fade-left"
+            data-aos="zoom-out-up"
           >
             <Form.Field className="label--input">
               <div className="flex flex-col">
@@ -216,7 +216,8 @@ export default function Contact({ copyMail }) {
         <div className="hidden md:flex items-center">
           <div className=" border-l-2 border-solid border-blue-7 dark:border-bluedark-7  h-2/3"></div>
         </div>
-        <div className=" md:w-1/6 flex items-center" data-aos="fade-right">
+        <div className=" md:w-1/6 flex items-center" data-aos="zoom-out-up">
+          {/* data-aos="fade-right"> */}
           <Flex direction="column" gap="5" className="w-fit">
             <a
               href="https://github.com/NocerGal"

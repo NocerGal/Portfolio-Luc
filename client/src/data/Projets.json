@@ -2,32 +2,35 @@
   {
     "titre": "Draven the Real Legend",
     "lang": {
-      "fr": "Site web utilisant l'API RIOT GAME permettant d'afficher l'historique des parties d'un joueur avec les différentes statistiques associées à la partie du joueur. La recherche s'effectue en fonction du pseudo du joueur et de sa région pour afficher lles 20 dernières parties.",
-      "en": "Website using the RIOT GAME API to display the match history of a player with various statistics associated with the player's game. The search is based on the player's username and region to display the last 20 games."
+      "fr": "Site web utilisant l'API RIOT GAME permettant d'afficher l'historique des parties d'un joueur avec les différentes statistiques associées. La recherche s'effectue en fonction du pseudo du joueur et de sa région pour afficher lles 20 dernières parties.",
+      "en": "Website using the RIOT GAME API to display the match history of a player with various statistics. The search is based on the player's username and region to display the last 20 games."
     },
-    "image": "src/assets/Kasa.webp",
+    "image": "src/assets/DRL.webp",
     "tags": ["React", "TypeScript", "Tailwindcss"],
-    "git": "https://github.com/NocerGal"
+    "git": "https://github.com/NocerGal/Draven-Real-Legend",
+    "website": ""
   },
   {
     "titre": "Argent Bank",
     "lang": {
       "fr": "L'objectif de ce projet a été de gérer la connexion d'un utilisateur à son espace bancaire en fonction d'un indentifiant et d'un ot de passe. L'utilisateur peut ensuite consulter ses transactions ainsi que modifier son identifiant",
-      "en": "The aim of this project was to manage a user's connection to their banking space based on an identifier and a password. The user can then consult their transactions and modify their identifier."
+      "en": "The aim of this project to manage a user's connection to their banking space based on an identification and a password. The user can then consult their transactions and modi  fy their identification."
     },
-    "image": "src/assets/Kasa.webp",
+    "image": "src/assets/argentbank.webp",
     "tags": ["React", "Redux", "HTML"],
-    "git": "https://github.com/NocerGal"
+    "git": "https://github.com/NocerGal/Projet-11-OC---ArgentBank",
+    "website": ""
   },
   {
     "titre": "724events",
     "lang": {
-      "fr": "Ce projet a but de reprendre le travail d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
-      "en": "This project aims to take over the work of a developer from an event agency and to fix the last bugs of the site using unit testing."
+      "fr": "Ce projet a but de reprendre le travail encours d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
+      "en": "This project aims to take over the work of a developer from an events agency and to fix latest bugs of the site using unit test."
     },
-    "image": "src/assets/Kasa.webp",
+    "image": "src/assets/723event.webp",
     "tags": ["React", "HTML", "Javascript"],
-    "git": "https://github.com/NocerGal"
+    "git": "https://github.com/NocerGal/Projet-10-OC",
+    "website": ""
   },
   {
     "titre": "Nina Carducci",
@@ -35,18 +38,43 @@
       "fr": "Après avoir contacté Nina Carducci pour lui proposer des services d'amélioration du SEO, plusieurs techniques ont été déployées pour maximiser le référencement naturel de son site vitrine.",
       "en": "After contacting Nina Carducci to offer her SEO improvement services, several techniques were deployed to maximize the natural referencing of her showcase website."
     },
-    "image": "src/assets/Kasa.webp",
+    "image": "src/assets/Nina.webp",
     "tags": ["SEO"],
-    "git": "https://github.com/NocerGal"
+    "git": "https://github.com/NocerGal/OC-Projet-9",
+    "website": "https://nocergal.github.io/OC-Projet-9/"
+  },
+
+  {
+    "titre": "Kasa",
+    "lang": {
+      "fr": "KASA est une application web permettant de rechercher des biens immobilier à louer entre particulier.",
+      "en": "KASA is a web application that allows users to search for real estate properties for rent between private individuals."
+    },
+    "image": "src/assets/KASA.webp",
+    "tags": ["React", "SASS"],
+    "git": "https://github.com/NocerGal/Projet-8-OC---Kasa",
+    "website": ""
   },
   {
     "titre": "Sophie Bluel",
     "lang": {
       "fr": "Site vitrine de la photographe Sophie Bluel. L'artiste peut se connecter à son espace client pour ajouter ou supprimer des photographies. Un filtre permettra également à l'utilisateur d'afficher par thème les photos qu'il souhaite afficher.",
-      "en": "Showcase website for photographer Sophie Bluel. The artist can log into her client area to add or remove photographs. A filter will also allow users to display photos by theme that they wish to show."
+      "en": "Showcase website for photographer Sophie Bluel. The artist can log into her personnal space to add or remove photographs. A filter will also allow visitors to display photos by theme that they wish to show."
     },
-    "image": "src/assets/Kasa.webp",
+    "image": "src/assets/SophieBLuel_1.webp",
     "tags": ["HTML", "JavaScript"],
-    "git": "https://github.com/NocerGal"
+    "git": "https://github.com/NocerGal/Projet_6_OC_Cr-ez_une_page_web_dynamique_avec_JavaScript",
+    "website": "https://nocergal.github.io/Projet_6_OC_Cr-ez_une_page_web_dynamique_avec_JavaScript/"
+  },
+  {
+    "titre": "Oh My Food",
+    "lang": {
+      "fr": "Oh My Food is a web application that allows users to select restaurants and place orders for delivery or takeout.",
+      "en": "Showcase website for photographer Sophie Bluel. The artist can log into her personnal space to add or remove photographs. A filter will also allow visitors to display photos by theme that they wish to show."
+    },
+    "image": "src/assets/OMF.webp",
+    "tags": ["HTML", "CSS"],
+    "git": "https://github.com/NocerGal/Projet-4-OC-OMG",
+    "website": "https://nocergal.github.io/Projet-4-OC-OMG/"
   }
 ]
