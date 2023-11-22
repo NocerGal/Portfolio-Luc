@@ -8,10 +8,9 @@
   "presentation-first-sentence": "Passionate about his profession, new technologies",
   "presentation-second-sentence": "and your projects.",
   "description-title": "Who am I?",
-  "description-first-sentence": "With a Master's degree in Production and Logistics, I started as production planner in pharmaceutical industry, acquired expertise in project management. My passion for technology then led me to web development, specializing in React.",
-  "description-second-sentence": "With inhanced training in React, I am ready to invest myself in innovative projects, applying my technical skills for effective and high-quality solutions.",
-  "description-thrid-sentence": "Attracted by advanced technologies and challenging tasks, my goal is to provide effective and meticulous solutions to your projects.",
-  "description-fourth-sentence": "Fan of collaboration, I am open to discussions about innovative projects or any ideas.",
+  "description-first-sentence": "After completing my Master’s degree in Production and Logistics, I started my career as Production Planner in a pharmaceutical company. One highlight of my first position was developing advanced skills in Project Management. My passion for technologies then led me to web development, specializing in React.",
+  "description-second-sentence": "Building on enhanced trainings in React, I am eager to face new challenges and invest myself in your innovative projects, applying my skills for effective and high-quality solutions.",
+  "description-thrid-sentence": "I would be excited to discuss about your innovative ideas/projects and collaborate with you to make them a success!",
   "realisations-title": "Projects",
   "form-contact": "Contact",
   "form-firstname": "First Name",
@@ -25,5 +24,7 @@
   "form-provide-message": "Enter your question",
   "form-button-send": "Send",
   "form-button-sent": "Message Sent",
-  "form-button-failed": "Message Not Sent"
+  "form-button-failed": "Message Not Sent",
+  "visit-website": "Visit website",
+  "more": "See more"
 }

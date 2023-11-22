@@ -2,8 +2,8 @@
   {
     "titre": "Draven the Real Legend",
     "lang": {
-      "fr": "Site web utilisant l'API RIOT GAME permettant d'afficher l'historique des parties d'un joueur avec les différentes statistiques associées. La recherche s'effectue en fonction du pseudo du joueur et de sa région pour afficher lles 20 dernières parties.",
-      "en": "Website using the RIOT GAME API to display the match history of a player with various statistics. The search is based on the player's username and region to display the last 20 games."
+      "fr": "Site web utilisant l'API RIOT GAMES permettant d'afficher l'historique des parties d'un joueur avec les différentes statistiques associées. La recherche s'effectue en fonction du pseudo du joueur et de sa région pour afficher lles 20 dernières parties.",
+      "en": "Website using the RIOT GAMES API to display the player’s match history with various statistics. The search is based on the player’s username and region, and allows to review the last 20 games played."
     },
     "image": "src/assets/DRL.webp",
     "tags": ["React", "TypeScript", "Tailwindcss"],
@@ -14,7 +14,7 @@
     "titre": "Argent Bank",
     "lang": {
       "fr": "L'objectif de ce projet a été de gérer la connexion d'un utilisateur à son espace bancaire en fonction d'un indentifiant et d'un ot de passe. L'utilisateur peut ensuite consulter ses transactions ainsi que modifier son identifiant",
-      "en": "The aim of this project to manage a user's connection to their banking space based on an identification and a password. The user can then consult their transactions and modi  fy their identification."
+      "en": "This project aims to to manage a user's connection to their banking space based on an identification and a password. The user can then review their transactions and modify their identification."
     },
     "image": "src/assets/argentbank.webp",
     "tags": ["React", "Redux", "HTML"],
@@ -25,7 +25,7 @@
     "titre": "724events",
     "lang": {
       "fr": "Ce projet a but de reprendre le travail encours d'un développeur d'une agence évenementielle et de corriger les derniers bugs du site à l'aide de test unitaire.",
-      "en": "This project aims to take over the work of a developer from an events agency and to fix latest bugs of the site using unit test."
+      "en": "This project aims to take over the work of a developer from an events agency and to fix bugs using unit test."
     },
     "image": "src/assets/723event.webp",
     "tags": ["React", "HTML", "Javascript"],

@@ -4,11 +4,13 @@ import projets from '../data/Projets.json';
 import { GitHubLogo } from '../assets/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useThemeContext } from '../Context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 
 export default function Realisations() {
+  const [more, setMore] = useState(4);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,7 +23,7 @@ export default function Realisations() {
 
         <div className=" relative px-8 max-w-7xl mx-auto">
           <div className="flex flex-wrap flex-col md:grid md:grid-cols-2 md:gap-12 justify-start gap-8">
-            {projets.map((projet, i) => (
+            {projets.slice(0, more).map((projet, i) => (
               <CardRealisation
                 animation="fade-up"
                 key={i + projet.titre}
@@ -36,11 +38,24 @@ export default function Realisations() {
           </div>
         </div>
       </div>
+      {more < projets.length && (
+        <div className="mx-auto z-50">
+          <button
+            onClick={() => setMore((prev) => prev + 2)}
+            className="text-xl font-semibold cursor-pointer rounded-lg p-1 text-blue-1 dark:text-bluedark-12 bg-blue-9 dark:bg-bluedark-9 
+            hover:bg-blue-11   hover:dark:bg-blue-11
+            "
+          >
+            {t('more')}
+          </button>
+        </div>
+      )}
     </section>
   );
 }
 
 function CardRealisation({ text, title, img, tags, git, animation, website }) {
+  const { t } = useTranslation();
   return (
     <div
       data-aos={animation}
@@ -71,7 +86,7 @@ function CardRealisation({ text, title, img, tags, git, animation, website }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Website
+                {t('visit-website')}
               </a>
             )}
           </div>

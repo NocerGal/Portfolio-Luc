@@ -10,8 +10,7 @@
   "description-title": "Qui suis-je?",
   "description-first-sentence": "Diplômé d'un Master en Production et Logistique, j'ai débuté dans la planification de production dans le secteur pharmaceutique, acquérant une expertise en gestion de projet. Ma passion pour la technologie m'a ensuite orienté vers le développement web, me spécialisant en React.",
   "description-second-sentence": "Avec une formation spécialisée en React, je suis prêt à m'investir dans des projets novateurs, en appliquant mes compétences techniques pour des solutions efficaces et qualité.",
-  "description-thrid-sentence": "Attiré par les avancées technologiques et les défis stimulants, mon objectif est d'apporter des solutions efficaces et méticuleuses dans mes projets.",
-  "description-fourth-sentence": "Appréciant la collaboration, je suis ouvert à des discussions sur des projets ou des idées novatrices en technologie.",
+  "description-thrid-sentence": "Je serais ravi de discuter de vos idées/projets innovants et de collaborer avec vous pour les mener à bien !",
   "realisations-title": "Réalisations",
   "form-contact": "Contact",
   "form-firstname": "Prénom",
@@ -25,5 +24,7 @@
   "form-provide-message": "Indiquer votre question",
   "form-button-send": "Envoyer",
   "form-button-sent": "Message envoyé",
-  "form-button-failed": "Message non envoyé"
+  "form-button-failed": "Message non envoyé",
+  "visit-website": "Aller sur le site",
+  "more": "Voir plus"
 }

@@ -23,7 +23,6 @@ export default function Description() {
           </p>
           <p className="description">{t('description-second-sentence')}</p>
           <p className="description">{t('description-thrid-sentence')}</p>
-          <p className="description m-0">{t('description-fourth-sentence')}</p>
         </div>
       </div>
     </section>

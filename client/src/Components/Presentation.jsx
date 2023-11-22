@@ -23,7 +23,10 @@ export default function Presentation() {
   }, []);
   return (
     <section className="h-[88vh]">
-      <div className="h-full flex justify-evenly  max-w-7xl mx-auto px-8">
+      <div
+        className="h-full flex justify-evenly  max-w-7xl mx-auto px-8"
+        data-aos="fade-down"
+      >
         <div className="flex flex-col justify-between items-center md:flex-row gap-16 lg:gap-4 my-auto w-full">
           <div className="flex flex-col justify-around">
             <div className="flex flex-col gap-4 sm:black leading-tight sm:leading-8 text-center md:text-start">
