@@ -1,9 +1,9 @@
 import * as Form from '@radix-ui/react-form';
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { Badge, Flex } from '@radix-ui/themes';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,40 +19,44 @@ export default function Contact({ copyMail }) {
   const [copyMessage, setCopyMessage] = useState(false);
   const [textButton, setTextButton] = useState(t('form-button-send'));
   const [buttonIsDisable, setButtonIsDisable] = useState(false);
+  const form = useRef();
 
-  function sendMail() {
-    console.log(firstName, lastName);
+  const sendMail = () => {
     if (email && message) {
-      axios
-        .post('http://localhost:5000/send_email', {
-          message,
-          email,
-          firstName,
-          lastName,
-        })
-        .then(() => {
-          setFirstName('');
-          setLastName('');
-          setEmail('');
-          setMessage('');
-          setTextButton(t('form-button-sent'));
-          setTimeout(() => {
-            setTextButton(t('form-button-send'));
-            setButtonIsDisable((prev) => !prev);
-          }, 5000);
-        })
-        .catch(() => {
-          alert("Something went wrong, email hasn't been send");
-          setTextButton(t('form-button-failed'));
-          setTimeout(() => {
-            setTextButton(t('form-button-send'));
-            setButtonIsDisable((prev) => !prev);
-          }, 3500);
-        });
-      return;
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
+          form.current,
+          import.meta.env.VITE_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setMessage('');
+            setTextButton(t('form-button-sent'));
+            setTimeout(() => {
+              setTextButton(t('form-button-send'));
+              setButtonIsDisable((prev) => !prev);
+            }, 5000);
+            console.log(result.text);
+          },
+          (error) => {
+            alert("Something went wrong, email hasn't been send");
+            setTextButton(t('form-button-failed'));
+            setTimeout(() => {
+              setTextButton(t('form-button-send'));
+              setButtonIsDisable((prev) => !prev);
+            }, 3500);
+            console.log(error.text);
+          }
+        );
+    } else {
+      return alert('Fill in all the fields to continue');
     }
-    return alert('Fill in all the fields to continue');
-  }
+  };
 
   useEffect(() => {
     AOS.init();
@@ -74,6 +78,7 @@ export default function Contact({ copyMail }) {
             {t('form-contact')}
           </h2>
           <Form.Root
+            ref={form}
             name="contact-form"
             autoComplete="on"
             onSubmit={() => sendMail()}

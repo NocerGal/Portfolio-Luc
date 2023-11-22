@@ -1,7 +1,7 @@
 import { useThemeContext } from '../Context/ThemeContext';
 import { MoonIcon, SunIcon, TextAlignJustifyIcon } from '@radix-ui/react-icons';
-import DARK_LOGO from '../assets/logoDark.webp';
-import LIGHT_LOGO from '../assets/logoLight.webp';
+import DARK_LOGO from '/public/logoDark.webp';
+import LIGHT_LOGO from '/public/logoLight.webp';
 import { useState } from 'react';
 import NavHeaderMobil from './NavHeaderMobil';
 import {

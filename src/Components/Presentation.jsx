@@ -1,5 +1,5 @@
 import { Badge, Flex } from '@radix-ui/themes';
-import LUC_PICTURE from '../assets/photoLuc.jpeg';
+import LUC_PICTURE from '/public/photoLuc.webp';
 import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
