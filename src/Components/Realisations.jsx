@@ -39,7 +39,7 @@ export default function Realisations() {
         </div>
       </div>
       {more < projets.length && (
-        <div className="mx-auto z-50">
+        <div className="mx-auto z-30">
           <button
             onClick={() => setMore((prev) => prev + 2)}
             className="text-xl font-semibold cursor-pointer rounded-lg p-1 text-blue-1 dark:text-bluedark-12 bg-blue-9 dark:bg-bluedark-9 

@@ -66,6 +66,10 @@
     @apply relative z-10 cursor-pointer hover:bg-blue-11;
   }
 
+  .lang {
+    -webkit-appearance: none;
+  }
+
   .input {
     @apply rounded-lg px-2 py-1 dark:text-bluedark-1 border-2 border-solid border-blue-7 dark:border-bluedark-7 focus:outline-blue-8 dark:focus:outline-bluedark-8;
   }

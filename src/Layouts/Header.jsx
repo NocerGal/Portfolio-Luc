@@ -39,7 +39,7 @@ export default function Header() {
             aria-label="select language"
             value={lang}
             onChange={(e) => toggleLang(e.target.value)}
-            className="bg-transparent text-4xl rounded-lg border-2 border-transparent hover:border-blue-7 dark:hover:border-bluedark-7"
+            className="lang bg-transparent text-4xl rounded-lg border-2 border-transparent hover:border-blue-7 dark:hover:border-bluedark-7"
           >
             <option value="fr">🇫🇷</option>
             <option value="en">🇬🇧</option>
